@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/public/css/index.css">
+
+</head>
+<body>
+<%- include('includes/menu.ejs') %>
+<div class="main">
+    <h1 id="projectTitle">Phone Free Drive</h1>
+    <div class="card-container">
+        <div class="card">
+            <a href="/car-accident-data">
+                <h2>Car accident data</h2>
+                <p>Users can see their form's history.</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/questionnaire-result">
+                <h2>Questionnaire result</h2>
+                <p>Users can see here the conclusions and data that they submitted regarding whether they have distraction problems because of the phone or not.</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/gameResult">
+                <h2>Game data</h2>
+                <p>Users can see their scores and statistics about their games here.</p>
+            </a>
+        </div>
+    </div>
+</div>
+<%- include('includes/end.ejs') %>

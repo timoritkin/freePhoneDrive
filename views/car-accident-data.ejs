@@ -1,0 +1,27 @@
+
+            <%- include('includes/head.ejs') %>
+            <link rel="stylesheet" href="/public/css/car-accident-data.css">
+        </head>
+            
+            <body>
+                <%- include('includes/menu.ejs') %>
+            
+                <div id="container">
+                    <h1>Accident List</h1>
+                    <ul id="accident-list">
+                        <% accidents[0].forEach(accident=> { %>
+                            <li class="accident-item">
+                                <strong>Severity:</strong> <%= accident.severity %> <br>
+                                <strong>Damage:</strong> <%= accident.damage %><br>
+                                <strong>Location of Accident:</strong> <%= accident.location %><br>
+                                <strong>Was a phone the cause of the accident?</strong> <%= accident.phoneCause %><br>
+                                <strong>Accident Date:</strong> <%= accident.accidentDate %><br>
+                                <strong>Accident Description:</strong> <%= accident.accidentDescription %><br>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>
+            
+                <%- include('includes/end.ejs') %>
+            </body>
+            

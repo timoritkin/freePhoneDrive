@@ -1,0 +1,103 @@
+/* game.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+
+}
+
+#game {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#game div {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+#game div.incorrect {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}
+
+.correct {
+    /* background-color: #4caf50; */
+    background-color: green;
+}
+
+.present {
+    background-color: yellow;
+}
+
+.absent {
+    background-color: gray;
+}
+
+#timer, #guessInput {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2196f3;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1976d2;
+}
+
+#stats {
+    margin-top: 15px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.stats-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.stats h2, .insights h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stats p, .insights p {
+    color: #666;
+    font-size: 16px;
+}

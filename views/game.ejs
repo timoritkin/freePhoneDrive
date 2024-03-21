@@ -1,0 +1,22 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/game.css">
+    </head>
+
+    <body>
+        <%- include('includes/menu.ejs') %>
+            <header>
+                <h1>Wordle: Car Safety Edition</h1>
+            </header>
+            <div id="game"></div>
+            <input type="text" id="guessInput" maxlength="5" placeholder="Enter your guess">
+            <button onclick="submitGuess()">Guess</button>
+            <div id="timer">Time: 0 seconds</div>
+
+
+
+            <footer>
+                <p>&copy; 2024 Wordle Itamar, Hadar and Timor All rights reserved.</p>
+            </footer>
+            <script src="/public/scripts/gameScript.js"></script>
+
+            <%- include('includes/end.ejs') %>

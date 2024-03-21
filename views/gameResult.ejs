@@ -1,0 +1,62 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/public/css/gameResult.css">
+</head>
+<body>
+    <%- include('includes/menu.ejs') %>
+    <div class="container">
+        <h1 class="title">Your Games Results History</h1>
+        <div class="game-responses">
+            <% gameResults[0].forEach(gameResults => { %>
+                <div class="response">
+                    <h2 class="response-title">This is your game result for: <%= gameResults.gameDate %>:</h2>
+                    <table class="response-table">
+                        <tr>
+                            <th>Field</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Guesses</td>
+                            <td><%= gameResults.guesses  %></td>
+                        </tr>
+                        <tr>
+                            <td>Game Time (Seconds)</td>
+                            <td><%= gameResults.gameTime  %></td>
+                        </tr>
+                        <tr>
+                            <td>Total Guesses</td>
+                            <td><%= gameResults.totalGuesses  %></td>
+                        </tr>
+                        <tr>
+                            <td>Score</td>
+                            <td><%= gameResults.score  %></td>
+                        </tr>
+                        <tr>
+                            <td>Game Result</td>
+                            <td><%= gameResults.gameResult  %></td>
+                        </tr>
+                    </table>
+                 
+                    <% if (gameResults.prize === '"yes"') { %>
+                        <% if (gameResults.score >= 15000) { %>
+                            <p class="prize-text">You win a Bluetooth Car Kit Prize!</p>
+                            <img src="/public/css/images/prize/bluetooth-car-kit.jpg" alt="Bluetooth Car Kit" class="prize-image">
+                        <% } else if (gameResults.score >= 10000) { %>
+                            <p class="prize-text">You win a Dash Cam Prize!</p>
+                            <img src="/public/css/images/prize/dash-cam.jpg" alt="Dash Cam" class="prize-image">
+                        <% } else if (gameResults.score >= 5000) { %>
+                            <p class="prize-text">You win a Car Phone Mount Prize!</p>
+                            <img src="/public/css/images/prize/phone-holder.jpg" alt="Car Phone Mount" class="prize-image">
+                        <% } else if (gameResults.score >= 1000) { %>
+                            <p class="prize-text">You win a Gas Gift Card Prize!</p>
+                            <img src="/public/css/images/prize/gas-gift-card.jpg" alt="Gas Gift Card" class="prize-image">
+                        <% }
+                    } else if (gameResults.prize === '"no"') { %>
+                        <p class="no-prize-text">No prize won.</p>
+                        <img src="/public/css/images/prize/sad-smiley.png" alt="Sad Smiley" class="prize-image">
+                    <% } %>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <%- include('includes/end.ejs') %>
+</body>

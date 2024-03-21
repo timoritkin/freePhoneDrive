@@ -1,0 +1,68 @@
+/* error.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    color: #d9534f;
+}
+
+h2 {
+    color: #d9534f;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #286090;
+}
+
+.solway-light {
+    font-family: "Solway", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.solway-regular {
+    font-family: "Solway", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.solway-medium {
+    font-family: "Solway", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.solway-bold {
+    font-family: "Solway", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.solway-extrabold {
+    font-family: "Solway", serif;
+    font-weight: 800;
+    font-style: normal;
+}

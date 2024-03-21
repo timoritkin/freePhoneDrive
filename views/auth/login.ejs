@@ -1,0 +1,26 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/public/css/login.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('../includes/menu.ejs') %>
+    <div class="container">
+        <div id="loginContainer"> 
+            <h1 id="loginTitle">Login:</h1>
+        
+            <form id="userForm" method="post" action="/login">
+                <div class="formGroup">
+                    <label class="inputLabel">ID: </label>
+                    <input class="userInput" type="text" name="UserID">
+                </div>
+                <div class="formGroup">
+                    <label class="inputLabel">Password: </label>
+                    <input class="userInput" type="password" name="password">
+                </div>
+                <input id="loginButton" type="submit" value="LOGIN">
+            </form>
+        </div>
+    </div>
+    <%- include('../includes/end.ejs') %>

@@ -1,0 +1,49 @@
+/* styles.css */
+
+/* Body styles */
+body {
+    font-family: "Solway", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-family: "Solway", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* List styles */
+#accident-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* List item styles */
+.accident-item {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Strong tag styles within list items */
+.accident-item strong {
+    color: #007bff;
+}
+

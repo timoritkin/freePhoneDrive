@@ -1,0 +1,121 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/questionnaire-result.css">
+    </head>
+
+    <body>
+        <%- include('includes/menu.ejs') %>
+            <div class="container">
+                <h1>Questionnaire Results</h1>
+                <div class="questionnaire-responses">
+                    <% questionnaireResponses[0].forEach(response=> { %>
+                        <div class="response">
+                            <h2>This is your answers to questionnaire <%= questionnaireResponses[0].indexOf(response) +
+                                    1 %>:</h2>
+                            <table>
+                                <tr>
+                                    <th>Question</th>
+                                    <th>Response</th>
+                                </tr>
+                                <tr>
+                                    <td>1. I often find myself using my phone while driving.
+                                    </td>
+                                    <td>
+                                        <%= response.q1 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2. I feel anxious if I don't check my phone notifications while driving.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q2 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3. I have missed important road signs because I was looking at my phone.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q3 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4. I find it difficult to resist answering calls while driving.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q4 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5. I believe that I can safely text while waiting at a red light.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q5 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6. I use navigation apps on my phone while driving but do not engage in texting.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q6 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7. I feel confident in my ability to multitask while driving.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q7 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8. I have had close calls or minor accidents because of using my phone while
+                                        driving.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q8 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9.  I don't put my phone on silent while driving.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q9 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10. I believe that using the phone while driving will not lead to an accident.
+
+                                    </td>
+                                    <td>
+                                        <%= response.q10 %>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>Driving Distraction Score: <%= response.driving_distraction_score %>
+                            </p>
+                            <% if (response.driving_distraction_score < 3) { %>
+                                <p style="color: red;">Conclousion: You have a driving distraction. Please be cautious
+                                    while driving.</p>
+                                <p>Recommendation: Consider limiting phone usage while driving and practice more focused
+                                    driving.</p>
+                                <% } else if (response.driving_distraction_score===3) { %>
+                                    <p style="color: rgb(253, 194, 0);">Conclousion: Your driving distraction level is
+                                        within an acceptable range.</p>
+                                    <p>Recommendation: Continue to maintain focus while driving and avoid distractions.
+                                    </p>
+                                    <% } else { %>
+                                        <p style="color: green;">Conclousion: You do not have a driving distraction.</p>
+                                        <p>Recommendation: Continue practicing safe driving habits and maintaining focus
+                                            on the road.</p>
+                                        <% } %>
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+            <%- include('includes/end.ejs') %>

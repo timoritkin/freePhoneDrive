@@ -1,0 +1,50 @@
+/* public/css/questionnaire-result.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.questionnaire-responses {
+    margin-top: 20px;
+}
+
+.response {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.response h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Styles for conclusions and recommendations */
+.conclusion {
+    margin-top: 20px;
+}
+
+.recommendation {
+    font-weight: bold;
+}

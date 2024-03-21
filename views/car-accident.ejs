@@ -1,0 +1,80 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/car-accident.css">
+    </head>
+
+
+
+    <body>
+        <%- include('includes/menu.ejs') %>
+
+
+
+
+            <h1 id="accidentTitle">Add your accident experience</h1>
+
+
+
+            <main>
+                <form id="accidentForm" method="post" action="/car-accident">
+
+                    <fieldset>
+                        <legend>Accident Details</legend>
+                        <label for="location">Location of Accident:</label><br>
+                        <input type="text" id="location" name="location" required><br>
+                        <label for="phoneCause">Was a phone the cause of the accident?</label><br>
+                        <select id="phoneCause" name="phoneCause" required>
+                            <option value=""></option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                            <option value="unknown">i don't know</option>
+                        </select><br>
+                        <label for="damage">what was the level of the damage?</label><br>
+
+                        <select id="damage" name="damage" required>
+                            <option value=""></option>
+                            <option value="low">low</option>
+                            <option value="medium">medium</option>
+                            <option value="high">high</option>
+                        </select><br>
+                        <label for="severity">what was the level of the severity?</label><br>
+                        <select id="severity" name="severity" required>
+                            <option value=""></option>
+                            <option value="Minor">Minor </option>
+                            <option value="Moderate">Moderate </option>
+                            <option value="Severe">Severe</option>
+                            <option value="Fatal">Fatal </option>
+
+                        </select><br>
+                        <label for="accidentDate">Accident Date:</label><br>
+                        <input type="date" id="accidentDate" name="accidentDate" required><br>
+                        <label for="accidentDescription">Accident Description:</label><br>
+                        <textarea id="accidentDescription" name="accidentDescription" required></textarea><br>
+                    </fieldset>
+                    <input class="common-button" type="submit" value="Submit">
+                </form>
+
+
+                <div id="confirmationPopup" class="popup">
+                    <div class="popup-content">
+                        <p>Thank you for submitting the form!</p>
+                        <p>Return to the home page press OK</p>
+                        <span class="line-md--confirm"></span>
+
+                        <a href="index.html">
+                            <button class="common-button" id="popupButton">OK</button>
+                        </a>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- disable future dates -->
+            <script>
+                var today = new Date().toISOString().split('T')[0];
+                document.getElementsByName("accidentDate")[0].setAttribute('max', today);
+            </script>
+
+
+
+            <%- include('includes/end.ejs') %>

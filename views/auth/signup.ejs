@@ -1,0 +1,89 @@
+
+
+    <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/public/css/signup.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('../includes/menu.ejs') %>
+
+    <div class="container">
+        <p id="welcomeLabel">Welcome to the Registration Page</p>
+
+        <form id="userForm" method="post" action="/signup">
+            <h5 id="noteField">Fields marked with <span class="requiredSymbol">*</span> are required</h5>
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>ID number:</label>
+                <input class="userInput" type="text" name="UserID" pattern="[0-9]{1,9}" minlength="9" maxlength="9"
+                    title="Please enter a numeric UserID with maximum 9 digits" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>First Name:</label>
+                <input class="userInput" type="text" name="FirstName" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Last Name:</label>
+                <input class="userInput" type="text" name="LastName" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Birth date:</label>
+                <input class="userInput" type="date" name="birthDate" max="" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Email:</label>
+                <input class="userInput" type="email" name="Email" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Phone Number:</label>
+                <input class="userInput" type="text" name="PhoneNumber" pattern="[0-9]{0,10}" maxlength="10"
+                    title="Please enter a valid 10-digit phone number without any spaces or special characters." required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Password:</label>
+                <input class="userInput" type="password" name="password" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Street:</label>
+                <input class="userInput" type="text" name="Street" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>City:</label>
+                <input class="userInput" type="text" name="City" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Country:</label>
+                <input class="userInput" type="text" name="Country" required>
+            </div>
+
+            <div class="formGroup">
+                <label class="inputLabel"><span class="requiredSymbol">*</span>Gender:</label>
+                <select class="userSelect" name="Gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <input class="userSubmit" type="submit" value="Submit">
+        </form>
+    </div>
+                    <!-- disable future dates -->
+                    <script>
+                        var today = new Date().toISOString().split('T')[0];
+                        document.getElementsByName("birthDate")[0].setAttribute('max', today);
+                    </script>
+
+    <%- include('../includes/end.ejs') %>
+</body>

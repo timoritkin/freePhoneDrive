@@ -1,0 +1,60 @@
+/* Style for card container */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Style for individual card */
+.card {
+    width: 300px;
+    height: 200px; 
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hover effect on card */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Style for card heading */
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Solway", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Style for card paragraph */
+.card p {
+    font-size: 16px;
+    color: #666;
+    font-family: "Solway", serif;
+    font-weight: 500;
+    font-style: normal;
+    
+
+}
+
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1{
+    font-family: "Solway", serif;
+    font-weight: 500;
+    font-style: normal;
+}

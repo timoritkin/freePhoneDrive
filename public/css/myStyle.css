@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Solway", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mynav {
+    width: 100%;
+    display: flex;
+    margin-bottom: 2.5%;
+    background-color: aquamarine;
+}
+
+.ul_nav {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+}
+
+.li_nav {
+    padding-top: 2%;
+    margin-right: 1%;
+}
+
+.nav_img {
+    width: 5%;
+    margin-right: 1%;
+}
+
+.navLink {
+    width: 10%;
+    text-decoration: none;
+}
+#projectTitle{
+    text-align: center;
+}

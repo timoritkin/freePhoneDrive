@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Solway", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#logo {
+    width: 10%;
+}
+
+main {
+    width: 95%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+form {
+    background-color: #f4f4f4;
+    padding: 2%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 2% rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 50%;
+    margin: auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 2%;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    background-color: #f4f4f4;
+}
+
+#severity,
+#damage,
+#gender,
+#phoneCause,
+input[type="number"] {
+    width: 20%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 0.1rem solid #ccc;
+    border-radius: 1%;
+    background-color: #f4f4f4;
+}
+
+#accidentTitle {
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 0.1rem solid #ccc;
+    border-radius: 1%;
+    background-color: #f4f4f4;
+}
+
+textarea {
+    max-height: 200px;
+    resize: vertical;
+    overflow-y: auto;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 2%;
+    border-radius: 1%;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+footer {
+    border-style: dashed;
+}
+
+/* popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 3%;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#popupButton {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.line-md--confirm {
+    width: 40%;
+    height: 50px;
+    margin: 20px auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%2320f21c' stroke-dasharray='24' stroke-dashoffset='24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 11L11 17L21 7'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.4s' values='24;0'/%3E%3C/path%3E%3C/svg%3E");
+}
+
+.common-button:hover,
+#popupButton:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 600px) {
+    form {
+        width: 70%;
+    }
+}
+
+/* Media queries for phone screens */
+@media only screen and (max-width: 480px) {
+    form {
+        padding: 8%;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        padding: 6%;
+    }
+
+    input[type="submit"] {
+        padding: 6%;
+    }
+}
